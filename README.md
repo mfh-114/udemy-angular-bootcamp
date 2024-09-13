@@ -1,2 +1,2 @@
-# udemy-angular-bootcamp
-It my Udemy the Modern Angular Bootcamp course to keep track my course progress.
+# Udemy-angular-bootcamp
+I am learning Angular from Udemy "The Modern Angular Bootcamp" course. This repo is created because I would like to keep track my study.
