@@ -1,13 +1,54 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'pdw-generator';
+
+  private length = 0;
+  private password:string = '';
+  private includeLetters:boolean = false;
+  private includeNumbers:boolean = false;
+  private includeSymbols:boolean = false;
+
+  onButtonClick() {
+    console.log('Button was clicked');
+    this.password = 'jaskkjask192913';
+
+    console.log(`
+      Include length: ${this.length}
+      Include letter checked: ${this.includeLetters} 
+      Include number checked: ${this.includeNumbers}
+      Include symbol checked: ${this.includeSymbols} 
+    `);
+  }
+
+  getPassword() {
+    return this.password;
+  }
+
+  onChangeUseLetters() {
+    this.includeLetters = !this.includeLetters;
+    console.log("Include letter checked: " + this.includeLetters);
+  }
+
+  onChangeUseNumbers() {
+    this.includeNumbers = !this.includeNumbers;
+    console.log("Include number checked: " + this.includeNumbers);
+  }
+
+  onChangeUseSymbols() {
+    this.includeSymbols = !this.includeSymbols;
+    console.log("Include symbol checked: " + this.includeSymbols);
+  }
+
+  onChangeLength(event: any) {
+
+    const parsedValue =  parseInt(event.target.value);
+    if (!isNaN(parsedValue)) {
+      this.length= parsedValue;
+    }
+  }
 }
