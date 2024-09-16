@@ -29,6 +29,26 @@ export class AppComponent {
     return this.password;
   }
 
+  getLength(){
+    return this.length;
+  }
+
+  getIncludeLetters() {
+    return this.includeLetters;
+  }
+
+  getIncludeNumbers() {
+    return this.includeNumbers;
+  }
+
+  getIncludeSymbols() {
+    return this.includeSymbols;
+  }
+
+  displayPasswordToggle(){
+    return this.password == null;
+  }
+
   onChangeUseLetters() {
     this.includeLetters = !this.includeLetters;
     console.log("Include letter checked: " + this.includeLetters);
