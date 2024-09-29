@@ -1,0 +1,27 @@
+<div class="container is-centered">
+      <div class="box">
+        <h1 class="title has-text-centered">Typing Challange</h1>
+        <h2>Timer: {{''}}</h2>
+
+        <div class="box">
+            <h2 class="subtitle has-text-centered">
+              @for (c of generateRandomTextArr(); track c; let index = $index) {
+                <span [class]="markedColorClassArr[index]">{{c}}</span>
+              }
+            </h2>
+        </div>
+
+        <div class="field">
+          <input class="input" (input)="onChangeMatch($event)" (keydown)="onKeyDown($event)" [disabled]="isWin" />
+        </div>
+
+        @if (isWin) {
+          <div class="box">
+              <h2 class="sub-title has-text-centered">You Win</h2>
+          </div>
+        } @else {
+          <div class="box">
+                    </div>
+        }
+      </div>
+</div>
