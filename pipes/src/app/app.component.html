@@ -1,0 +1,14 @@
+<div>
+    <label>Payee Name</label>
+    <input (input) = 'onNameChange($event)' />
+</div>
+
+{{name | titlecase}}
+
+
+<div>
+    <label>Miles</label>
+    <input (input) = 'onMilesChange($event)' />
+</div>
+
+Kilometers: {{miles | convertmiles}} 
