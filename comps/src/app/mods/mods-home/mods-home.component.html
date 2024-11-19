@@ -1,0 +1,18 @@
+<app-divider>Mods Component</app-divider>
+
+@if (toggleModal) {
+    <app-modal (close)="onClick()">
+        <header>Modal Header</header>
+        <p>
+            This is modal dialog box.
+        </p>
+        <div modalFooter>
+            <button (click)="onClick()" class="ui b">Close</button>
+        </div>
+    </app-modal>
+}
+<button class="ui button" (click)="onClick()">Open Modal</button>
+
+<app-divider>Accordion Component</app-divider>
+
+<app-accordion [items]="items"></app-accordion>

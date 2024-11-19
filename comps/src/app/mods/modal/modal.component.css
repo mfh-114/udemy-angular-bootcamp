@@ -1,0 +1,22 @@
+/* actions selector's element are empty then
+   display none.*/
+.actions:empty{
+    display:none;
+}
+
+/*
+  actions-default's element are empty then
+  display none.
+*/
+.actions-default {
+    display: none;
+}
+
+/*
+if element has selector
+actions:empty and action-default then
+display block.
+*/
+.actions:empty + .actions-default {
+    display:block;
+}
